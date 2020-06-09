@@ -37,14 +37,14 @@ def init_db():
 def fill_db():
     # ---Create table---
     print('--- Filling out database ---')
-    clients_list = [{'name':'Arin', 'city':'Surgut', 'address':'Mira 30'},{'name':'Olga', 'city':'Lissabon', 'address':'Main str 4'},
+    clients_list = [{'name':'Aygul', 'city':'Grozny', 'address':'Avtomobil 20'},{'name':'Olga', 'city':'Lissabon', 'address':'Mainstr 4'},
     {'name':'Inga', 'city':'Sochi', 'address':'Lenina 20'},{'name':'Egor', 'city':'Tobolsk', 'address':'Pobedi 50'},
     {'name':'Sasha', 'city':'Engels', 'address':'Bistrinskaya 3'},{'name':'Mimino', 'city':'Grozny', 'address':'Avtomobil 20'},
     {'name':'Nikita', 'city':'Moscow', 'address':'Lenina 8'}, {'name':'Sakamoto', 'city':'Tokio', 'address':'Hokkaido 45'},
-    {'name':'Natasha', 'city':'Kiev', 'address':'Portovaya 18'}, {'name':'Jhon', 'city':'London', 'address':'Bakerstreet 221'}]
+    {'name':'Natasha', 'city':'Kiev', 'address':'Portovaya 18'}, {'name':'Denis', 'city':'Kiev', 'address':'Portovaya 18'}]
 
     orders_list = []
-    orders_list_dis = ['main','good','super','bad','amaxing','unforgettable']
+    orders_list_dis = ['main','good','super','bad','amazing','unforgettable']
 
     for i in range(len(clients_list)): 
         orders_list.append({'clients': i+1, 'date': str(random.randint(2000,2020))+'-'+str(random.randint(1,12))+'-'+str(random.randint(1,28)), 'amount': random.randint(1,100), 'description': orders_list_dis[random.randint(0,5)]})
