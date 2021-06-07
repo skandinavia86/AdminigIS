@@ -1,0 +1,23 @@
+pipeline {
+    agent any
+    options {
+        timestamps()
+    }
+
+    stages {
+
+        stage("Start Install Libraries") {
+            steps {
+                sh 'pip3 install -r requirements.txt'
+                echo 'End install libraries'
+            }
+        }
+
+        stage("Start PyTest") {
+            steps {
+                sh 'python3 -m pytest -v --junitxml=report.xml'
+                echo 'End PyTest'
+            }
+        }
+    }
+}
