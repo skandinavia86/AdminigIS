@@ -37,14 +37,14 @@ def init_db():
 def fill_db():
     # ---Create table---
     print('--- Filling out database ---')
-    clients_list = [{'name':'Aygul', 'city':'Grozny', 'address':'Avtomobil 20'},{'name':'Olga', 'city':'Lissabon', 'address':'Mainstr 4'},
-    {'name':'Inga', 'city':'Sochi', 'address':'Lenina 20'},{'name':'Egor', 'city':'Tobolsk', 'address':'Pobedi 50'},
-    {'name':'Sasha', 'city':'Engels', 'address':'Bistrinskaya 3'},{'name':'Mimino', 'city':'Grozny', 'address':'Avtomobil 20'},
-    {'name':'Nikita', 'city':'Moscow', 'address':'Lenina 8'}, {'name':'Sakamoto', 'city':'Tokio', 'address':'Hokkaido 45'},
-    {'name':'Natasha', 'city':'Kiev', 'address':'Portovaya 18'}, {'name':'Denis', 'city':'Kiev', 'address':'Portovaya 18'}]
+    clients_list = [{'name':'Bob', 'city':'Surgut', 'address':'Univer 3'},{'name':'Masha', 'city':'Lentor', 'address':'Arbatova 4'},
+    {'name':'Misha', 'city':'Surgut', 'address':'50 let'},{'name':'Igor', 'city':'Tomsk', 'address':'Lenina 1'},
+    {'name':'Sveta', 'city':'Tolati', 'address':'Jykov 3'},{'name':'Maksim', 'city':'Surgut', 'address':'30 let'},
+    {'name':'Nikita', 'city':'Moscow', 'address':'Lenina 8'}, {'name':'Rob', 'city':'Tokio', 'address':'Rovod 1'},
+    {'name':'Nastya', 'city':'Kirov', 'address':'Bistinskya 18'}, {'name':'Danil', 'city':'Kirov', 'address':'Bistrinskya 18'}]
 
     orders_list = []
-    orders_list_dis = ['main','good','super','bad','amazing','unforgettable']
+    orders_list_dis = ['metal','gold','silver','bronze','diamond','redstone']
 
     for i in range(len(clients_list)): 
         orders_list.append({'clients': i+1, 'date': str(random.randint(2000,2020))+'-'+str(random.randint(1,12))+'-'+str(random.randint(1,28)), 'amount': random.randint(1,100), 'description': orders_list_dis[random.randint(0,5)]})
